@@ -1,0 +1,135 @@
+:root {
+    --branco: #FFFFFF;
+    --preto: #212529;
+    --rosa: #d33643;
+    --sombra: 0px 2px 10px rgba(0, 0, 0, 0.25);
+    --degrade: linear-gradient(90deg, #FF5F6D 0%, #FFC371 100%);
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: var(--degrade);
+    
+}
+
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    box-sizing: border-box;
+    height: 80px;
+    width: 100%;
+    padding: 16px 80px;
+
+    background: var(--branco);
+    box-shadow: var(--sombra);
+}
+
+.cabecalho__titulo {
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: 3.2px;
+    color: var(--preto);
+}
+
+.menu__icone {
+    display: none;
+}
+
+.nav__lista {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.nav__lista > li > a {
+    font-size: 20px;
+    font-weight: 500;
+    text-decoration: none;
+    color: var(--preto);
+}
+
+.nav__lista > li:last-child > a {
+    display: inline-block;
+
+    padding: 8px 16px;
+    border-radius: 50px;
+
+    font-weight: 600;
+    line-height: 24px;
+
+    color: var(--branco);
+    background: var(--rosa);
+}
+
+@media screen and (max-width: 960px) {
+    .cabecalho {
+        height: 56px;
+        padding: 16px;
+    }
+
+    .cabecalho__titulo {
+        font-size: 20px;
+        letter-spacing: 2px;
+    }
+
+    .menu__nav {
+        display: none;
+    }
+    
+    .menu__icone {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        height: 24px;
+        width: 24px;
+    }
+
+    .icone__imagem {
+        width: 100%;
+    }
+
+    .aberto ~ .menu__nav {
+        display: block;
+        
+        position: absolute;
+        top: 56px;
+        left: 0;
+
+        width: 100%;
+    }
+
+    .nav__lista {
+        display: flex;
+        flex-direction: column;
+        gap: 0px;
+    }
+
+    .nav__lista > li {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        box-sizing: border-box;
+        width: 100%;
+        height: 40px;
+
+        background: var(--branco);
+        border-top: 1px solid var(--preto);
+    }
+
+    .nav__lista > li > a {
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    .nav__lista > li:last-child > a {
+        font-weight: 400;
+        
+        color: var(--preto);
+        background: none;
+        padding: 0;
+    }
+}
