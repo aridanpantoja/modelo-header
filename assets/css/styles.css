@@ -50,6 +50,10 @@ body {
     color: var(--preto);
 }
 
+.nav__lista > li > a:hover  {
+    font-weight: 600;
+}
+
 .nav__lista > li:last-child > a {
     display: inline-block;
 
@@ -62,6 +66,12 @@ body {
     color: var(--branco);
     background: var(--rosa);
 }
+
+.nav__lista > li:last-child > a:hover {
+    background: var(--degrade);
+    color: var(--branco);
+}
+
 
 @media screen and (max-width: 960px) {
     .cabecalho {
@@ -126,10 +136,16 @@ body {
     }
 
     .nav__lista > li:last-child > a {
-        font-weight: 400;
-        
+        font-weight: 500;
         color: var(--preto);
         background: none;
         padding: 0;
+    }
+    
+
+    .nav__lista > li:last-child > a:hover {
+        font-weight: 600;
+        color: var(--preto);
+        background: none;
     }
 }
